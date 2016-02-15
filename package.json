@@ -1,0 +1,45 @@
+{
+  "name": "vscode-todolist",
+  "displayName": "vscode-todolist",
+  "description": "Show all the TODOs in a project.",
+  "version": "0.0.1",
+  "publisher": "MichaelPerrotte",
+  "engines": {
+    "vscode": "^0.10.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikemimik/vscode-todolist.git"
+  },
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:ext.chooseLangTodo",
+    "onCommand:ext.listTodos",
+    "*"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ext.chooseLangTodo",
+        "title": "TODO: Choose language"
+      },
+      {
+        "command": "ext.listTodos",
+        "title": "TODO: Show all TODOs"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "async": "^1.5.2"
+  }
+}
