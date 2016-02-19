@@ -1,13 +1,13 @@
 # README
-## This is the README for your extension "vscode-todolist"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
+### Origin
+[This repository](https://github.com/MattiasPernhult/vscode-todo) is the source of this project.
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### Purpose
+This repo is a re-write of the origin. This repo allows for a custom Todo item and to display that
+item however you choose, very easily. This repo does not utilise the exlude functions just yet,
+that will be implimented later.
 
-** Enjoy!**
+### Goal
+The goal of this repo was to learn how to make extensions in vscode and see if I could improve on
+origin which was broken at the time of this repo's creation.
