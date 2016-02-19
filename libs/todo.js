@@ -29,15 +29,15 @@ function Todo() {
 Todo.prototype.toQuickPickItem = function toQuickPickItem() {
   // desc: output file + line # + ':' + indexOf(todo)
   // label: (60 chars)
-  var l = this.type;
-  var detail = ''
+  var detail = this.comment
+  var desc = ''
     + 'File: ' + this.fileName
-    + ' - '
+    + '    '
     + 'Line: ' + this.lineNum;
 
   return {
-    label: l,
-    description: this.comment,
+    label: this.type,
+    description: desc,
     detail: detail,
     range: this.range,
     fileName: this.fileName,
