@@ -41,7 +41,7 @@ var languageChoices = [
 
 // INFO: main function
 function activate(context) {
-  console.log('>>', 'Extention init', 'loaded', 'vscode-todo');
+  console.log('>>', 'Extention init', 'loaded', 'vscode-todolist');
 
   // INFO: if first time running from '*' activationEvent
   if (startup) { init(); }
@@ -142,7 +142,7 @@ function displayTodoList() {
   clearTodoList();
   Window.showQuickPick(pickList).then(function(selected) {
     if (!selected) { return; }
-    console.log('>>', 'selected todo', selected.fileUri); // TESTING
+    console.log('>>', 'selected todo', selected); // TESTING
     if (Window.activeTextEditor) {
 
       // INFO: there is an active text editor
