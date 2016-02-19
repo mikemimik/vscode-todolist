@@ -7,8 +7,8 @@ var Workspace = vscode.workspace;
 exports.createStatusBarItem = function createStatusBarItem() {
   var item = Window.createStatusBarItem(vscode.StatusBarAlignment.Left);
   item.text = 'TODOs';
-  item.tooltip = 'Show TODOs';
-  item.command = 'ext.showTodos';
+  item.tooltip = 'List TODOs';
+  item.command = 'ext.listTodos';
   item.color = '#FFFFFF';
   return item;
 };
