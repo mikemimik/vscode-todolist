@@ -44,14 +44,14 @@ exports.changeSearchExts = function changeSearchExts(language) {
   }
 };
 
-var updateExcludedFiles = exports.updateExcludedFiles = function updateExcludedFiles() {
+exports.updateExcludedFiles = function updateExcludedFiles() {
 
   // TODO: create glob pattern for all files and folders to exclude
   // TODO: function should return one string
   return '';
 };
 
-var showMessage = exports.showMessage = function showMessage(type, options) {
+exports.showMessage = function showMessage(type, options) {
   var message = '';
   switch(type) {
     case 'nofiles':
