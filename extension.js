@@ -51,7 +51,7 @@ function activate(context) {
       if (!language) { return; }
       choosenLang = language;
       searchExts = utils.changeSearchExts(language);
-      // TODO: update excluded files;
+      // TODO: update excluded files
       statusBarItem = utils.updateStatusBarItem(statusBarItem, language);
     });
   });
