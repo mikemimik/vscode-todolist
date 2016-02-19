@@ -84,9 +84,8 @@ function activate(context) {
                 // INFO: get the type of the comment
                 var typeMatch = todoMatch[0].match(typeRegex);
                 todoItem.type = typeMatch[1].toUpperCase();
-
-                // TODO: change this to `doc.uri`
-                todoItem.fileName = doc.fileName;
+                todoItem.fileName = doc.fileName.split('/')[doc.fileName.split('/').length - 1];
+                todoItem.fileUri = doc.uri;
                 todoItem.rawline = todoMatch[0];
                 todoItem.range = textLine.range;
 

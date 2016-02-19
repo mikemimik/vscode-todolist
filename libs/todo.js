@@ -21,20 +21,29 @@ function Todo() {
 
   // INFO: line number todo|fixme occours
   this.lineNum = null;
+
+  // INFO: uri of file where todo was found
+  this.fileUri = null;
 }
 
 Todo.prototype.toQuickPickItem = function toQuickPickItem() {
   // desc: output file + line # + ':' + indexOf(todo)
   // label: (60 chars)
   var l = this.type;
+  var detail = ''
+    + 'File: ' + this.fileName
+    + ' - '
+    + 'Line: ' + this.lineNum;
+
   return {
     label: l,
     description: this.comment,
+    detail: detail,
     range: this.range,
     fileName: this.fileName,
 
     // INFO: wrap created string as a vscode URI
-    fileUri: vscode.Uri.parse('file://' + this.fileName)
+    fileUri: this.fileUri
   };
 };
 
