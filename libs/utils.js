@@ -7,8 +7,8 @@ var Workspace = vscode.workspace;
 exports.createStatusBarItem = function createStatusBarItem() {
   var item = Window.createStatusBarItem(vscode.StatusBarAlignment.Left);
   item.text = 'TODOs';
-  item.tooltip = 'Show TODOs';
-  item.command = 'ext.showTodos';
+  item.tooltip = 'List TODOs';
+  item.command = 'ext.listTodos';
   item.color = '#FFFFFF';
   return item;
 };
@@ -44,14 +44,14 @@ exports.changeSearchExts = function changeSearchExts(language) {
   }
 };
 
-var updateExcludedFiles = exports.updateExcludedFiles = function updateExcludedFiles() {
+exports.updateExcludedFiles = function updateExcludedFiles() {
 
   // TODO: create glob pattern for all files and folders to exclude
   // TODO: function should return one string
   return '';
 };
 
-var showMessage = exports.showMessage = function showMessage(type, options) {
+exports.showMessage = function showMessage(type, options) {
   var message = '';
   switch(type) {
     case 'nofiles':

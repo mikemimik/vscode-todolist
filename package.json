@@ -2,7 +2,7 @@
   "name": "vscode-todolist",
   "displayName": "vscode-todolist",
   "description": "Show all the TODOs in a project.",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "publisher": "MichaelPerrotte",
   "engines": {
     "vscode": "^0.10.6"
